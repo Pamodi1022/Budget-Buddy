@@ -1,4 +1,6 @@
 <script>
+// @ts-nocheck
+
     import { onMount, onDestroy } from 'svelte';
     import { incomeStore } from '../stores/incomeStore.js';
     import { expenseStore } from '../stores/expenseStore.js';

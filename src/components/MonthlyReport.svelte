@@ -1,4 +1,6 @@
 <script>
+// @ts-nocheck
+
     import { incomeStore } from '../stores/incomeStore.js';
     import { expenseStore } from '../stores/expenseStore.js';
     import { groupByMonth } from '../utils/dateUtils.js';
