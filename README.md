@@ -17,32 +17,73 @@ Budget Buddy is a modern, intuitive personal finance management application buil
 
 ### Prerequisites
 
-- Node.js (v16 or higher)
-- npm or yarn
+Before you begin, ensure you have the following installed:
+- [Node.js](https://nodejs.org/) (v16 or higher)
+- [npm](https://www.npmjs.com/) (comes with Node.js) or [yarn](https://yarnpkg.com/)
 
 ### Installation
 
-1. Clone the repository:
-```bash
-git clone https://github.com/yourusername/budget-buddy.git
-cd budget-buddy
-```
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/budget-buddy.git
+   cd budget-buddy
+   ```
 
-2. Install dependencies:
-```bash
-npm install
-# or
-yarn install
-```
+2. **Install dependencies**
+   ```bash
+   npm install
+   # or if you prefer yarn
+   yarn install
+   ```
 
-3. Start the development server:
-```bash
-npm run dev
-# or
-yarn dev
-```
+3. **Environment Setup**
+   - Create a `.env` file in the root directory
+   - Add any required environment variables (if applicable)
 
-4. Open [http://localhost:5173](http://localhost:5173) in your browser
+### Running the Project
+
+#### Development Mode
+
+1. **Start the development server**
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+2. **Access the application**
+   - Open your browser and navigate to [http://localhost:5173](http://localhost:5173)
+   - The app will automatically reload when you make changes to the source files
+
+#### Production Build
+
+1. **Build the application**
+   ```bash
+   npm run build
+   # or
+   yarn build
+   ```
+
+2. **Preview the production build**
+   ```bash
+   npm run preview
+   # or
+   yarn preview
+   ```
+
+3. **Deploy**
+   - The built files will be in the `build` directory
+   - Deploy these files to your preferred hosting service
+
+### Common Issues & Solutions
+
+- **Port already in use**: If port 5173 is in use, the server will automatically try the next available port
+- **Dependency issues**: Try clearing the cache and reinstalling dependencies
+  ```bash
+  npm cache clean --force
+  rm -rf node_modules
+  npm install
+  ```
 
 ## 🛠️ Built With
 
@@ -56,28 +97,11 @@ yarn dev
 ```
 budget-buddy/
 ├── src/
-│   ├── lib/          # Shared components and utilities
+│   ├── components/   # Shared components 
 │   ├── routes/       # Application routes
 │   └── app.html      # Main HTML template
 ├── static/           # Static assets
 └── package.json      # Project dependencies
 ```
 
-## 🤝 Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- Thanks to the Svelte and TailwindCSS communities
-- Inspired by the need for better personal finance management tools
-
-## 📞 Contact
-
-Your Name - [@yourtwitter](https://twitter.com/yourtwitter)
-
-Project Link: [https://github.com/yourusername/budget-buddy](https://github.com/yourusername/budget-buddy)
