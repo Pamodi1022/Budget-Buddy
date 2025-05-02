@@ -10,16 +10,11 @@
     function scrollToSection(id) {
         const element = document.getElementById(id);
         if (element) {
-            // Get the navbar height to offset scrolling
             const navbar = document.querySelector('nav');
             const navbarHeight = navbar ? navbar.offsetHeight : 0;
-
-            // Calculate the element's position relative to the document
             const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
-
-            // Scroll to element with offset for the navbar
             window.scrollTo({
-                top: elementPosition - navbarHeight - 20, // Additional 20px padding
+                top: elementPosition - navbarHeight - 20,
                 behavior: 'smooth'
             });
         }
@@ -27,57 +22,75 @@
 </script>
 
 <nav class="bg-white dark:bg-gray-900 shadow-md sticky top-0 z-50">
-    <div class="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row justify-between items-center gap-4">
-        <h1 class="text-xl font-bold text-gray-800 dark:text-white">
-            Personal Finance Dashboard
-        </h1>
-        <div class="flex flex-wrap items-center gap-4 text-sm text-gray-700 dark:text-gray-300">
-            <button
+    <div class="max-w-6xl mx-auto px-4 py-3">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+            <!-- Logo and Brand -->
+            <div class="flex items-center gap-2">
+                <img src="/logo.png" alt="Personal Finance Logo" class="h-8 w-auto" />
+                <span class="text-xl font-semibold text-gray-800 dark:text-white hidden sm:block">
+                    Budget Buddy
+                </span>
+            </div>
+
+            <!-- Navigation Links -->
+            <div class="flex flex-wrap items-center justify-center gap-6 text-sm">
+                <button
                     on:click={() => scrollToSection('home')}
-                    class="hover:text-blue-500 text-left"
-            >
-                Home
-            </button>
-
-        <div class="flex flex-wrap items-center gap-4 text-sm text-gray-700 dark:text-gray-300">
-            <button
+                    class="nav-link hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
+                >
+                    Home
+                </button>
+                <button
                     on:click={() => scrollToSection('add-transactions')}
-                    class="hover:text-blue-500 text-left"
-            >
-                Add Income/Expense
-            </button>
-            <button
+                    class="nav-link hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
+                >
+                    Add Transaction
+                </button>
+                <button
                     on:click={() => scrollToSection('transaction-lists')}
-                    class="hover:text-blue-500 text-left"
-            >
-                Transactions
-            </button>
-            <button
+                    class="nav-link hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
+                >
+                    Transactions
+                </button>
+                <button
                     on:click={() => scrollToSection('set-savings')}
-                    class="hover:text-blue-500 text-left"
-            >
-                Set Savings Goal
-            </button>
-            <button
+                    class="nav-link hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
+                >
+                    Set Goal
+                </button>
+                <button
                     on:click={() => scrollToSection('view-savings')}
-                    class="hover:text-blue-500 text-left"
-            >
-                Savings Goals
-            </button>
-            <button
+                    class="nav-link hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
+                >
+                    Goals
+                </button>
+                <button
                     on:click={() => scrollToSection('balance-history')}
-                    class="hover:text-blue-500 text-left"
-            >
-                Balance History
-            </button>
-            <button
+                    class="nav-link hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
+                >
+                    Balance
+                </button>
+                <button
                     on:click={() => scrollToSection('monthly-summary')}
-                    class="hover:text-blue-500 text-left"
-            >
-                Monthly Summary
-            </button>
+                    class="nav-link hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
+                >
+                    Summary
+                </button>
+            </div>
 
-            <DarkModeToggle />
+            <!-- Dark Mode Toggle -->
+            <div class="flex items-center">
+                <DarkModeToggle />
+            </div>
         </div>
     </div>
 </nav>
+
+<style>
+    .nav-link {
+        @apply text-gray-700 dark:text-gray-100 px-2 py-1 rounded-md font-medium;
+    }
+    .nav-link:hover {
+        @apply bg-gray-100 dark:bg-gray-700 dark:text-white;
+    }
+</style>
