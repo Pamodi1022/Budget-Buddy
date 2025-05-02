@@ -19,11 +19,11 @@
     }
 </script>
 
-<div class="bg-white p-4 rounded shadow">
+<div id="add-transactions" class="bg-white dark:bg-gray-800 p-4 rounded shadow text-gray-900 dark:text-white">
     <h2 class="text-lg font-semibold mb-3">Add Income</h2>
-    <input class="input" bind:value={source} placeholder="Source" />
-    <input class="input" type="number" bind:value={amount} placeholder="Amount" />
-    <input class="input" type="date" bind:value={date} />
+    <input class="input dark:bg-gray-700 dark:border-gray-600 dark:text-white" bind:value={source} placeholder="Source" />
+    <input class="input dark:bg-gray-700 dark:border-gray-600 dark:text-white" type="number" bind:value={amount} placeholder="Amount" />
+    <input class="input dark:bg-gray-700 dark:border-gray-600 dark:text-white" type="date" bind:value={date} />
     <button class="mt-2 bg-green-500 text-white px-4 py-1 rounded" on:click={addIncome}>
         Add
     </button>
