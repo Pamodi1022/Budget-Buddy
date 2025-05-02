@@ -1,4 +1,6 @@
 <script>
+// @ts-nocheck
+
     import { theme } from '../stores/themeStore.js';
     import DarkModeToggle from "./DarkModeToggle.svelte";
 
