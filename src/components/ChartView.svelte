@@ -7,7 +7,9 @@
 
     Chart.register(...registerables);
 
+    // @ts-ignore
     let canvas;
+    // @ts-ignore
     let chart;
     const balanceHistory = writable([]);
 
