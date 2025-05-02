@@ -1,4 +1,6 @@
 <script>
+// @ts-nocheck
+
     import { createEventDispatcher } from 'svelte';
 
     export let transactions = [];
@@ -29,7 +31,7 @@
     }
 </script>
 
-<div class="mt-6">
+<div id="transaction-lists" class="mt-6">
     <h2 class="text-xl font-semibold mb-3 capitalize">{type} Transactions</h2>
 
     {#if transactions.length === 0}

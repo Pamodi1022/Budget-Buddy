@@ -1,4 +1,6 @@
 <script>
+// @ts-nocheck
+
     import { savingsStore } from '../stores/savingsStore.js';
 
     function deleteGoal(id) {
@@ -11,7 +13,7 @@
     }
 </script>
 
-<div class="mt-6">
+<div id="view-savings" class="mt-6">
     <h2 class="text-xl font-semibold mb-3">Savings Goals</h2>
 
     {#if $savingsStore.length === 0}

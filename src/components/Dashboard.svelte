@@ -1,10 +1,13 @@
 <script>
+// @ts-nocheck
+
   import IncomeForm from '../components/IncomeForm.svelte';
   import ExpenseForm from '../components/ExpenseForm.svelte';
   import TransactionList from '../components/TransactionList.svelte';
   import SavingsForm from '../components/SavingsForm.svelte';
   import SavingsList from '../components/SavingsList.svelte';
   import ChartView from '../components/ChartView.svelte';
+  import MonthlyReport from '../components/MonthlyReport.svelte';
 
   import { incomeStore } from '../stores/incomeStore.js';
   import { expenseStore } from '../stores/expenseStore.js';
@@ -48,20 +51,20 @@
 </script>
 
 <!-- Summary Cards -->
-<div class="p-4 max-w-6xl mx-auto">
-  <h1 class="text-3xl font-bold mb-6 text-center">Personal Finance Dashboard</h1>
+<div id="home" class="p-4 max-w-6xl mx-auto text-gray-900 dark:text-white">
+  <h1 class="text-3xl font-bold mb-6 text-center ">Personal Finance Dashboard</h1>
 
   <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-    <div class="bg-green-100 p-4 rounded shadow">
-      <p class="text-gray-700">Total Income</p>
+    <div class="bg-green-100 dark:bg-green-900 p-4 rounded shadow">
+      <p class="dark:text-white">Total Income</p>
       <p class="text-2xl font-semibold">₹{$totalIncome}</p>
     </div>
-    <div class="bg-red-100 p-4 rounded shadow">
-      <p class="text-gray-700">Total Expenses</p>
+    <div class="bg-red-100 dark:bg-red-900 p-4 rounded shadow">
+      <p class="dark:text-white">Total Expenses</p>
       <p class="text-2xl font-semibold">₹{$totalExpenses}</p>
     </div>
-    <div class="bg-blue-100 p-4 rounded shadow">
-      <p class="text-gray-700">Net Income</p>
+    <div class="bg-blue-100 dark:bg-blue-900 p-4 rounded shadow">
+      <p class="dark:text-white">Net Income</p>
       <p class="text-2xl font-semibold">₹{$netIncome}</p>
     </div>
   </div>
@@ -94,4 +97,6 @@
 
   <!-- Balance History Chart -->
   <ChartView />
+
+  <MonthlyReport />
 </div>
