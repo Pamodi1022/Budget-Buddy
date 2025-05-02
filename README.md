@@ -1,7 +1,6 @@
 # Budget Buddy 💰
 
-![Budget Buddy Logo](https://via.placeholder.com/150) <!-- Replace with actual logo -->
-
+<img src="static/favicon.png" alt="Budget Buddy Logo" width="180" height="170" />
 Budget Buddy is a modern, intuitive personal finance management application built with Svelte and TailwindCSS. Take control of your finances with this sleek, user-friendly budgeting tool that helps you track expenses, set savings goals, and achieve financial freedom.
 
 ## ✨ Features
@@ -25,7 +24,7 @@ Before you begin, ensure you have the following installed:
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/budget-buddy.git
+   git clone https://github.com/Pamodi1022/budget-buddy.git
    cd budget-buddy
    ```
 
